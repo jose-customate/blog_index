@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect Your Backend - Customate</title> 
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://github.com/jose-customate/email_signature_logo/blob/main/0803cm.png?raw=true">
+    <meta name="description" content="Customate helps businesses integrate their backend systems with our AI-powered customer service solution. Connect with Salesforce, Zendesk, Shopify and more.">
+  </head>
+  <body>
+    <!-- Top thin black banner with Language Dropdown -->
+    <div class="top-banner">
+      <div class="language-dropdown">
+        <button class="language-button">
+          <i class="fas fa-globe"></i> English <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#" class="active"><i class="fas fa-check"></i> English</a>
+          <a href="#">Español</a>
+          <a href="#">Deutsch</a>
+          <a href="#">Italiano</a>
+          <a href="#">हिंदी</a>
+          <a href="#">Norsk</a>
+          <a href="#">Hrvatski</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main navigation -->
+    <header class="header">
+      <div class="container-fluid">
+        <nav class="navbar">
+          <div class="navbar-brand">
+            <a href="https://www.customate.ai">
+              <img src="https://github.com/jose-customate/email_signature_logo/blob/main/0803cm.png?raw=true" alt="Customate" class="logo" />
+            </a>
+          </div>
+          
+          <div class="navbar-menu">
+            <div class="navbar-start">
+              <div class="navbar-item has-dropdown">
+                <a class="navbar-link">
+                  <span>Integrations</span>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="navbar-dropdown">
+                  <a href="https://www.customate.ai/integratebackend" class="dropdown-item">
+                    <i class="dropdown-icon backend-icon"></i>
+                    Backend
+                  </a>
+                  <a href="https://www.customate.ai/integratechannels" class="dropdown-item">
+                    <i class="dropdown-icon channels-icon"></i>
+                    Channels
+                  </a>
+                </div>
+              </div>
+              
+              <a href="https://www.customate.ai/pricing" class="navbar-item">Pricing</a>
+              <a href="https://www.customate.ai/blog" class="navbar-item">Blog</a>
+            </div>
+            
+            <div class="navbar-end">
+              <a href="#" class="navbar-item btn-login">Log In</a>
+              <a href="#" class="navbar-item btn-primary">Sign Up</a>
+            </div>
+          </div>
+          
+          <div class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Blog Index -->
+    <div class="blog-container">
+        <aside class="blog-sidebar">
+            <h1>Blog</h1>
+            <nav>
+                <ul class="blog-category-list">
+                    <li><button class="blog-category-button" data-category="A">Why an AI Customer Support Chatbot?</button></li>
+                    <li><button class="blog-category-button" data-category="B">Choosing an AI Customer Support Chatbot</button></li>
+                    <li><button class="blog-category-button" data-category="C">Get started with Customate</button></li>
+                    <li><button class="blog-category-button" data-category="D">Best practices</button></li>
+                    <li><button class="blog-category-button" data-category="E">Company</button></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="blog-content">
+            <div class="blog-article-grid" id="articleGrid">
+                <!-- Articles will be dynamically inserted here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <img src="https://github.com/jose-customate/email_signature_logo/blob/main/0803cm.png?raw=true" alt="Customate" class="footer-logo" />
+            <p>Automate Customer Support</p>
+          </div>
+        </div>
+        
+        <div class="bottom-bar">
+          <div class="links">
+            <a href="https://www.customate.ai/imprint" target="_blank">Imprint</a>
+            <a href="https://www.customate.ai/tac" target="_blank">Terms &amp; Conditions</a>
+            <a href="https://www.customate.ai/datause" target="_blank">Data Use</a>
+            <a href="#contact" class="contactLink">Contact us</a>
+          </div>
+          <strong>
+            <a href="#feedback" class="feedback">Feedback</a>
+          </strong>
+        </div>
+      </div>
+    </footer>
+  
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>We Value Your Feedback</h3>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <p>Help us improve our product — what can we do better? Also, please tell us about any customer service challenge you face in your business.</p>
+          <textarea id="feedbackInput" placeholder="Your feedback here..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-secondary" id="cancelFeedback">Cancel</button>
+          <button class="btn-primary" id="sendFeedback">Send Feedback</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Contact Our Team</h3>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="contactInput">Message</label>
+            <textarea id="contactInput" placeholder="How can we help you?"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-secondary" id="cancelContact">Cancel</button>
+          <button class="btn-primary" id="sendContact">Send Message</button>
+        </div>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
